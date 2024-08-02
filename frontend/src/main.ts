@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import Router from '@/application/router'
 import './presentation/styles/index.css'
-import { loadCities } from '@/infra/store/cities'
+import { loadFriends } from '@/infra/store/friends'
 import { useTelegram } from '@/application/services'
 import { getCSSVariable } from './infra/utils/dom'
 import { darkenColor } from './infra/utils/color'
@@ -78,7 +78,7 @@ function handleBrokenVariables(): void {
  * @todo load icons
  * @todo prepare image thumbs
  */
-void loadCities()
+void loadFriends()
   .then(() => {
     const app = createApp(App)
 
