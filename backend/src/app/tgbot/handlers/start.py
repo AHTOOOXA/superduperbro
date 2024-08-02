@@ -1,11 +1,11 @@
 from typing import Any
 
-from aiogram import types, Router
+from aiogram import Router, types
 from aiogram.filters import CommandStart
 
-from app.tgbot.keyboards.inline import main_menu
-from app.infrastructure.database.repo.requests import RequestsRepo
 from app.infrastructure.database.models.users import User
+from app.infrastructure.database.repo.requests import RequestsRepo
+from app.tgbot.keyboards.inline import main_menu
 
 start_router = Router()
 

@@ -8,12 +8,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from starlette.requests import Request
 
 from app.infrastructure.database.repo.requests import RequestsRepo
-from app.webhook.utils import (
-    get_repo,
-    validate_telegram_data,
-    bot,
-    parse_init_data,
-)
+from app.webhook.utils import (bot, get_repo, parse_init_data,
+                               validate_telegram_data)
 
 router = APIRouter()
 

@@ -6,8 +6,9 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.bot import DefaultBotProperties
 from aiogram.fsm.storage.redis import DefaultKeyBuilder, RedisStorage
 
-from app.infrastructure.database.setup import create_engine, create_session_pool
-from app.config import tgbot_config, db_config, redis_config
+from app.config import db_config, redis_config, tgbot_config
+from app.infrastructure.database.setup import (create_engine,
+                                               create_session_pool)
 from app.tgbot.handlers import routers_list
 from app.tgbot.middlewares.database import DatabaseMiddleware
 from app.tgbot.services import broadcaster

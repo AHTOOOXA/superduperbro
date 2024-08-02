@@ -1,11 +1,9 @@
 from typing import Optional
 
-from sqlalchemy import String
-from sqlalchemy import text, BIGINT, Boolean, true
-from sqlalchemy.orm import Mapped
-from sqlalchemy.orm import mapped_column
+from sqlalchemy import BIGINT, Boolean, String, text, true
+from sqlalchemy.orm import Mapped, mapped_column
 
-from .base import Base, TimestampMixin, TableNameMixin
+from .base import Base, TableNameMixin, TimestampMixin
 
 
 class User(Base, TimestampMixin, TableNameMixin):

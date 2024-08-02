@@ -1,11 +1,10 @@
 import asyncio
 from logging.config import fileConfig
 
+from alembic import context
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
-
-from alembic import context
 
 from app.config import db_config
 
@@ -30,6 +29,7 @@ config.set_main_option(
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 from app.infrastructure.database.models import Base
+
 target_metadata = Base.metadata
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

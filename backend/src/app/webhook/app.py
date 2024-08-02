@@ -1,10 +1,10 @@
 import logging
 
-from fastapi import FastAPI, APIRouter
+from fastapi import APIRouter, FastAPI
+from sqladmin import Admin
 from starlette.middleware.cors import CORSMiddleware
 
-from app.webhook import routers, admin
-from sqladmin import Admin
+from app.webhook import admin, routers
 from app.webhook.utils import engine
 
 app = FastAPI()
