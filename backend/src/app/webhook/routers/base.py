@@ -17,6 +17,7 @@ from app.webhook.utils import (
 
 router = APIRouter()
 
+
 @router.post("/health")
 async def book_slot(request: Request, repo: RequestsRepo = Depends(get_repo)):
     return {"status": "ok"}

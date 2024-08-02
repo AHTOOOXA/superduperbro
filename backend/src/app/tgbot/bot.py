@@ -46,7 +46,7 @@ def setup_logging():
 async def main():
     setup_logging()
 
-    bot = Bot(token=tgbot_config.token, default=DefaultBotProperties(parse_mode='HTML'))
+    bot = Bot(token=tgbot_config.token, default=DefaultBotProperties(parse_mode="HTML"))
     storage = RedisStorage.from_url(
         redis_config.dsn(),
         key_builder=DefaultKeyBuilder(with_bot_id=True, with_destiny=True),

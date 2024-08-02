@@ -152,4 +152,5 @@ def _load_config(path: str = None):
 
     return TgBot.from_env(env), DbConfig.from_env(env), RedisConfig.from_env(env)
 
-tgbot_config, db_config, redis_config = _load_config('.env')
+
+tgbot_config, db_config, redis_config = _load_config(".env")

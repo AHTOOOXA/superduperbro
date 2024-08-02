@@ -41,3 +41,21 @@ web = [
 [project.urls]
 "Homepage" = "https://github.com/Latand/MedSyncWebApp/"
 "Bug Tracker" = "https://github.com/Latand/MedSyncWebApp/issues"
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+include = '\.py$'
+exclude = '''
+/(
+    src/app/migrations
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
