@@ -19,6 +19,7 @@ services:
     stop_signal: SIGINT
 
   bot:
+    image: "telegram-fastapi-vue-bot"
     stop_signal: SIGINT
     build:
       context: ./backend
